@@ -3,8 +3,37 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Hello!</title>
+	<style type="text/css">
+		.wow:before {
+			content: "";
+			position: absolute;
+			display: block;
+			background-image: radial-gradient(rgba(255,255,255,1), rgba(255,255,255,0) 30%), linear-gradient(45deg, rgba(0,0,0,0) 49%, rgba(255,255,255,.4) 50%, rgba(0,0,0,0) 51%), linear-gradient(135deg, rgba(0,0,0,0) 49%, rgba(255,255,255,.4) 50%, rgba(0,0,0,0) 51%);
+			-webkit-animation: wow 10s linear infinite;
+			animation: wow 10s linear infinite;
+			transform: scale(0, 0) rotate(0deg);
+		    -webkit-animation-delay: 5s;
+		    animation-delay: 5s;
+			}
+
+			@-webkit-keyframes wow { 
+			10% { transform: scale(1, 1) rotate(80deg); } 
+			20% { transform: scale(0, 0) rotate(160deg); } 
+			100% { transform: scale(0, 0) rotate(0deg); } } 
+			@keyframes wow:before; { 
+			10% { transform: scale(1, 1) rotate(80deg); } 
+			20% { transform: scale(0, 0) rotate(160deg); } 
+			100% { transform: scale(0, 0) rotate(0deg); } }
+
+			.wow:before {
+			top: -21px;
+			left: 51px;
+			width: 85px;
+			height: 85px;
+			}
+	</style>
 </head>
-<body>
-	Hello, World!
+<body style="background: #000; color: #777;">
+	<p class="wow">Hello, World!</p>
 </body>
 </html>
